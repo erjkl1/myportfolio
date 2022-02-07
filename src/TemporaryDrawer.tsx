@@ -1,27 +1,57 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
+import {SxProps} from "@mui/system";
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import HistoryIcon from '@mui/icons-material/History';
+import ComputerIcon from '@mui/icons-material/Computer';
+import AppsIcon from '@mui/icons-material/Apps';
+import HelpIcon from '@mui/icons-material/Help';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#000',
+    },
+  },
+});
+
+  // type Props = {
+  //   position:string,
+  //   top:number,
+  //   width:number|string,
+  //   height:number|string,
+  //   zIndex:number, 
+  //   backgroundColor:string,
+  //   text:number|string,
+  //   cursorHover: string,
+  // };
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
-export default function TemporaryDrawer() {
-  const [state, setState] = React.useState({
-    left: false,
-  });
+type DrawerButton = {
+  sx?:object
+  text?:string
+}
 
-  const Icons = (index: any) => {
+export default function TemporaryDrawer({ sx={} , text='' }:DrawerButton) :JSX.Element{
+
+  const [state, setState] = React.useState({left: false,});
+  
+  const drawerList = ['Home', 'About', 'History', 'Skill', 'Work','Contact'];
+
+  const Icons = ( object:{index : number} ) => {
     let icon
-    switch(index){
+    switch(object.index){
       case 0:
         icon = <HomeIcon />
         break
@@ -29,16 +59,22 @@ export default function TemporaryDrawer() {
         icon = <AccountCircleIcon />
         break
       case 2:
-        icon = <HomeIcon />
+        icon = <HistoryIcon />
         break
       case 3:
-        icon = <HomeIcon />
+        icon = <ComputerIcon />
+        break
+      case 4:
+        icon = <AppsIcon />
+        break
+      case 5:
+        icon = <HelpIcon />
         break
       default:
-        icon = <HomeIcon />
+        icon = <AppsIcon />
         break
     }
-    return (icon);
+    return icon;
   }
 
   const toggleDrawer =
@@ -57,32 +93,35 @@ export default function TemporaryDrawer() {
 
   const list = (anchor: Anchor) => (
     <Box
-      sx={{ width:500 }}
+      sx={{ width:110 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {['Home', 'About', 'History', 'Skill', 'Work'].map((text, index) => { 
-        return(
-          <ListItem button key={text}>
-            <ListItemIcon>
-            <Icons index = {index}/>
-            </ListItemIcon>
-            <ListItemText primary={text} />
+      <List >
+        {drawerList.map((text, index) => 
+        (
+          <ListItem sx={{px:1, py:1}} key={text} button component={Link} to = {'/'+text} >
+              <ListItemIcon sx={{minWidth:0.35}}>
+              <Icons index = {index}/>
+              </ListItemIcon>
+              <ListItemText sx={{width:0.1, mr:1}} primary={text} />
           </ListItem>
-        )
-        })}
+        ))}
       </List>
-      <Divider />
     </Box>
   );
 
   return (
-    <div>
-      {(['left'] as const).map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+    <div>   
+      {(['left'] as const).map((anchor, index) => (
+        <React.Fragment key = {index}>
+          <ThemeProvider theme={darkTheme}>
+          <Button 
+            sx={sx} 
+            onClick={toggleDrawer(anchor, true)}>
+            {text}
+            </Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}
@@ -90,6 +129,7 @@ export default function TemporaryDrawer() {
           >
             {list(anchor)}
           </Drawer>
+          </ThemeProvider>
         </React.Fragment>
       ))}
     </div>

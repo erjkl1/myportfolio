@@ -1,0 +1,24 @@
+$text_width : 500px;
+
+div.home{
+  align-items:center ;
+  width: $text_width;  
+  margin: 0 auto;
+}
+
+.home-label{
+  margin: 0 auto;
+  display: inline-block;
+  user-select: none;
+  width: $text_width;  
+
+  &.welcome{
+  text-align: left;
+  font-size: 50px;
+  }
+
+  &.portfolio{
+    text-align: right;
+    font-size: 50px;
+  }
+}

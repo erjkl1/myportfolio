@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './index.css';
-import App from './App';
+import Home from './Home';
+import About from './About';
+import History from './History';
+// import Skill from './Skill';
+// import Work from './Work';
+// import Contact from './Contact';
+import NoMatch from './NoMatch';
 import reportWebVitals from './reportWebVitals';
 import TemporaryDrawer from './TemporaryDrawer'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-const darkTheme = createTheme({
+import { Snowshoeing } from '@mui/icons-material';
+import { isTemplateSpan } from 'typescript';
+
+const mainTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#0874bf',
-      light: '#1a81c5',
+      main: '#fff',
     },
     secondary: {
       main: '#c71d5c',
@@ -30,13 +39,39 @@ const darkTheme = createTheme({
   },
 });
 
+const Routing = () =>{
+  type routeConfig ={
+    [address : string]: JSX.Element;
+  };
+  const routing:routeConfig = {
+     home:<Home />, 
+     about: <About />, 
+     history: <History />, 
+    //  skill: <Skill />,
+    //  work: <work />,
+    //  contact: <contact />,
+    }
+  const componentsKey=Object.keys(routing);
+  return(
+    <BrowserRouter>
+      <Routes>
+              <Route path="/" element = {<Home />} />
+              <Route path="*" element={<NoMatch />} />
+              {componentsKey.map((key) =>
+              (
+              <Route path={'/'+key} element = {routing[key]} key={key} />
+              ))}
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={mainTheme}>
       <CssBaseline />
-      <App />
-      <TemporaryDrawer />
+        <Routing /> 
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
