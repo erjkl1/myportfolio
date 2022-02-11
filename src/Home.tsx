@@ -1,12 +1,12 @@
 import React from 'react';
-import './Home.scss';
 import TemporaryDrawer from './TemporaryDrawer';
-
+import Video from './Video'
 const Home = () => {
 
   const drawerStyle = {
     position:'absolute',
     top:0,
+    left:0,
     width:'100%',
     height:'100%',
     zIndex:100, 
@@ -16,15 +16,14 @@ const Home = () => {
     }
   };
 
-  return (
-   <div className='home'>
-    <label className='welcome home-label'>Welcome to </label>
-    <label className='portfolio home-label'>Chuke portfolio</label>
-    {/* TODO動画貼り付け */}
-    <TemporaryDrawer 
-    sx={drawerStyle} 
-    />
-   </div>
+  return ( 
+        <div>
+        <label className='text-white text-left text-4xl z-10 block absolute top-1/4 left-1/4'>Welcome to  Chuke portfolio</label>
+        <Video />
+        <TemporaryDrawer 
+        sx={drawerStyle} 
+        />
+        </div>
   );
 }
 

@@ -5,7 +5,7 @@ import './index.css';
 import Home from './Home';
 import About from './About';
 import History from './History';
-// import Skill from './Skill';
+import Skill from './Skill/Skill';
 // import Work from './Work';
 // import Contact from './Contact';
 import NoMatch from './NoMatch';
@@ -26,7 +26,7 @@ const mainTheme = createTheme({
       main: '#c71d5c',
     },
     background: {
-      default: '#0c0c0c',
+      default: '#333333',
       paper: 'rgba(33,33,33,0.58)',
     },
     text: {
@@ -47,7 +47,7 @@ const Routing = () =>{
      home:<Home />, 
      about: <About />, 
      history: <History />, 
-    //  skill: <Skill />,
+     skill: <Skill />,
     //  work: <work />,
     //  contact: <contact />,
     }

@@ -8,6 +8,10 @@ $text_width : 500px;
 
 }
 
+// .background{
+//   background-image: url(./img/camp.jpg);
+// }
+
 div.home{
   align-items:center ;
   width: $text_width;  
@@ -19,14 +23,4 @@ div.home{
   display: inline-block;
   user-select: none;
   width: $text_width;  
-
-  &.welcome{
-  text-align: left;
-  font-size: 50px;
-  }
-
-  &.portfolio{
-    text-align: right;
-    font-size: 50px;
-  }
 }
