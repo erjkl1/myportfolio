@@ -19,28 +19,22 @@ type SkillCard = {
 export default function SkillCard({title,body,icon}:SkillCard) {
 
   return (
-    <Card sx={{ minWidth: 275 , backgroundColor:'white',color:'black' }}>
-      <CardContent>
+    <Card sx={{ minWidth: 200 , backgroundColor:'white',color:'black' }}>
+      <CardContent sx={{borderColor:'black'}}>
         <Typography variant="h5" component="div">
-        {/* <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cakephp/cakephp-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" /> */}
-        <img src={icon} />
+        <div className='flex justify-center'>
+          <img src={icon} className='w-20'/>
+        </div>
         {title}
         </Typography>
+        <hr className='border-gray-500 my-1'/>
         <Typography variant="body2">
           {body}
         </Typography>
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small">Learn More</Button>
-
-
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }
