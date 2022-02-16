@@ -1,7 +1,7 @@
 
 // import { BrowserRouter, Route } from 'react-router-dom';
 import './About.scss';
-import Timeline from './Timeline.jsx'
+import Timeline from './Timeline'
 import TemporaryDrawer from './TemporaryDrawer';
 
 

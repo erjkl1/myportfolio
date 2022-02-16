@@ -25,17 +25,6 @@ const darkTheme = createTheme({
   },
 });
 
-  // type Props = {
-  //   position:string,
-  //   top:number,
-  //   width:number|string,
-  //   height:number|string,
-  //   zIndex:number, 
-  //   backgroundColor:string,
-  //   text:number|string,
-  //   cursorHover: string,
-  // };
-
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 type DrawerButton = {
@@ -46,36 +35,21 @@ type DrawerButton = {
 export default function TemporaryDrawer({ sx={} , text='' }:DrawerButton) :JSX.Element{
 
   const [state, setState] = React.useState({left: false,});
-  
-  const drawerList = ['Home', 'About', 'History', 'Skill', 'Work','Contact'];
 
-  const Icons = ( object:{index : number} ) => {
-    let icon
-    switch(object.index){
-      case 0:
-        icon = <HomeIcon />
-        break
-      case 1:
-        icon = <AccountCircleIcon />
-        break
-      case 2:
-        icon = <HistoryIcon />
-        break
-      case 3:
-        icon = <ComputerIcon />
-        break
-      case 4:
-        icon = <AppsIcon />
-        break
-      case 5:
-        icon = <HelpIcon />
-        break
-      default:
-        icon = <AppsIcon />
-        break
-    }
-    return icon;
-  }
+  type drawerList ={
+    [address : string]: JSX.Element;
+  };
+
+  const drawerList:drawerList = {
+    Home:<HomeIcon />,
+    About:<AccountCircleIcon />,
+    History:<HistoryIcon />,
+    Skill:<ComputerIcon />,
+    Work:<AppsIcon />,
+    Contact:<HelpIcon />,
+  };
+
+  const drawerKey=Object.keys(drawerList);
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -99,13 +73,13 @@ export default function TemporaryDrawer({ sx={} , text='' }:DrawerButton) :JSX.E
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List >
-        {drawerList.map((text, index) => 
+        {drawerKey.map((key) => 
         (
-          <ListItem sx={{px:1, py:1}} key={text} button component={Link} to = {'/'+text} >
+          <ListItem sx={{px:1, py:1}} key={key} button component={Link} to = {'/'+key} >
               <ListItemIcon sx={{minWidth:0.35}}>
-              <Icons index = {index}/>
+              {drawerList[key]}
               </ListItemIcon>
-              <ListItemText sx={{width:0.1, mr:1}} primary={text} />
+              <ListItemText sx={{width:0.1, mr:1}} primary={key} />
           </ListItem>
         ))}
       </List>

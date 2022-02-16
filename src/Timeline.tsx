@@ -42,7 +42,8 @@ const Sample = () => {
     <div className='w-full mt-10' >
         <Chrono 
         items={items} 
-        cardWidth= {1000}
+        
+        
         mode ='VERTICAL'
         />
     </div>

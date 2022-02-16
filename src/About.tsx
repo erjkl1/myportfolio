@@ -1,38 +1,37 @@
-
-// import { BrowserRouter, Route } from 'react-router-dom';
 import React from 'react';
 import Chuke from './img/chuke.png';
 import TemporaryDrawer from './TemporaryDrawer';
 import './About.scss';
-import Camp from './img/camp.jpg'
-import { url } from 'inspector';
-import Timeline from './Timeline.jsx'
+import Timeline from './Timeline'
+import WidgetsIcon from '@mui/icons-material/Widgets';
 
 const About = () => {
   const drawerButtonStyle = {
     position:'absolute',
-    right: '20px',
-    bottom: '20px',
-    width:'50px',
-    height:'50px',
-    display:'flex',
-    justifyContent: 'center',
-    backgroundColor:'blue',
+    left: '0',
+    top: '0',
+    width:'110px',
+    height:'100%',
+   
     color:'#ffffff',
     "&:hover": {
-      backgroundColor:'red',
+      backgroundColor:'black',
       cursor: 'default',
     }
   };
   
   return (
     // <div style={{ backgroundImage: `url(${Camp})`}} className='fixed top-0 left-0 h-screen w-full'> 
-    <div className='w-11/12 h-screen'>  
+    <div className='h-screen w-screen'> 
       <TemporaryDrawer 
       sx={drawerButtonStyle}
       text = 'menu' 
       />
-      <div className = 'flex justify-center pt-20'>
+      <div className='flex justify-center py-4 text-6xl'>
+        About
+      </div>
+      
+      <div className = 'flex justify-center'>
 
         <div className='w-2/5 mr-20'>
           <div className='flex justify-center'>
@@ -60,8 +59,11 @@ const About = () => {
             </div> */}
         </div>
       </div>
-      <div className='flex justify-center w-full'>
-        アンパーーーんち
+      <div className='flex justify-center w-full text-5xl'>
+        経歴
+      </div>
+      <div className='flex justify-center w-11/12 h-3/5'>
+        <Timeline />
       </div>
     </div>
   );
