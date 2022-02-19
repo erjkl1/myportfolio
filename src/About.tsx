@@ -1,7 +1,6 @@
 import React from 'react';
 import Chuke from './img/chuke.png';
 import TemporaryDrawer from './TemporaryDrawer';
-import './About.scss';
 import Timeline from './Timeline'
 import WidgetsIcon from '@mui/icons-material/Widgets';
 
