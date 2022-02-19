@@ -1,27 +1,25 @@
 import { init, send } from 'emailjs-com';
 import {useState} from 'react';
-import TemporaryDrawer from './TemporaryDrawer';
+import TemporaryDrawer from '../TemporaryDrawer';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import ClearIcon from '@mui/icons-material/Clear';
+import ContactForm from './ContactForm';
 
 
 export default function Contact () {
-  const drawerButtonStyle = {
-    position:'absolute',
-    right: '20px',
-    bottom: '20px',
-    width:'50px',
-    height:'50px',
-    display:'flex',
-    justifyContent: 'center',
-    backgroundColor:'blue',
-    color:'#ffffff',
-    "&:hover": {
-      backgroundColor:'red',
-      cursor: 'default',
-    }
-  };
+    const drawerButtonStyle = {
+        position:'absolute',
+        left: '0',
+        top: '0',
+        width:'110px',
+        height:'100%',
+        color:'#ffffff',
+        "&:hover": {
+          backgroundColor:'#171717',
+          cursor: 'default',
+        }
+      };
 
     const [name, setName] = useState(''); // 「ご氏名」の部分
     const [company, setCompany] = useState(''); // 「会社名」の部分
@@ -74,19 +72,34 @@ export default function Contact () {
 
     const disableSend = 
     name === '' || mail === '' || title === '' || message === '';
+
+    const labelList = ['ご氏名','メールアドレス','件名','お問い合わせ内容'];
+
+    const labelLists = {}
     
-  
   return (
     <div>
-        <h1 className="pageTitle text-center">お問い合わせ</h1>
+        <TemporaryDrawer 
+        sx={drawerButtonStyle} 
+        />
+        <h1 className="pageTitle text-center text-5xl my-10">お問い合わせ</h1>
         <div className="mainContent flex justify-center">
-            <div className="contentsBox">
+            <div className="contentsBox w-4/12">
             <p>
                 お問い合わせは、以下のフォームから受け付けております。
                 <br />
                 SNSからのご連絡でも大丈夫です！
             </p>
+
             <form>
+                {labelList.map((value)=>
+                (
+                    <ContactForm 
+                        label = {value}
+                    />
+                ))}
+
+
                 <div>
                 <label htmlFor="nameForm" >ご氏名：</label>
                 </div>

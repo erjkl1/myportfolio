@@ -3,8 +3,8 @@ import Home from './Home';
 import About from './About';
 import History from './History';
 import Skill from './Skill/Skill';
-// import Work from './Work';
-import Contact from './Contact';
+import Work from './Work/Work';
+import Contact from './Contact/Contact';
 import NoMatch from './NoMatch';
 
 const Routing = () =>{
@@ -14,10 +14,10 @@ const Routing = () =>{
     const routing:routeConfig = {
        home:<Home />, 
        about: <About />, 
-       history: <History />, 
+      //  history: <History />, 
        skill: <Skill />,
        contact: <Contact />,
-      //  work: <work />,`
+       work: <Work />,
       }
     const componentsKey=Object.keys(routing);
     return(

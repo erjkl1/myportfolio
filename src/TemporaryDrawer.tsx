@@ -14,6 +14,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import ComputerIcon from '@mui/icons-material/Computer';
 import AppsIcon from '@mui/icons-material/Apps';
 import HelpIcon from '@mui/icons-material/Help';
+import MenuIcon from '@mui/icons-material/Menu';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const darkTheme = createTheme({
@@ -43,9 +44,9 @@ export default function TemporaryDrawer({ sx={} , text='' }:DrawerButton) :JSX.E
   const drawerList:drawerList = {
     Home:<HomeIcon />,
     About:<AccountCircleIcon />,
-    History:<HistoryIcon />,
+    // History:<HistoryIcon />,
     Skill:<ComputerIcon />,
-    Work:<AppsIcon />,
+    // Work:<AppsIcon />,
     Contact:<HelpIcon />,
   };
 
@@ -87,25 +88,21 @@ export default function TemporaryDrawer({ sx={} , text='' }:DrawerButton) :JSX.E
   );
 
   return (
-    <div>   
-      {(['left'] as const).map((anchor, index) => (
-        <React.Fragment key = {index}>
-          <ThemeProvider theme={darkTheme}>
-          <Button 
-            sx={sx} 
-            onClick={toggleDrawer(anchor, true)}>
-            {text}
-            </Button>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-          </Drawer>
-          </ThemeProvider>
-        </React.Fragment>
-      ))}
-    </div>
+    <React.Fragment>
+      <ThemeProvider theme={darkTheme}>
+      <Button 
+        sx={sx} 
+        onClick={toggleDrawer('left', true)}>
+        {text == '' && <MenuIcon />}
+        </Button>
+      <Drawer
+        anchor={'left'}
+        open={state['left']}
+        onClose={toggleDrawer('left', false)}
+      >
+        {list('left')}
+      </Drawer>
+      </ThemeProvider>
+    </React.Fragment>
   );
 }

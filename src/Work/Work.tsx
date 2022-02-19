@@ -1,7 +1,7 @@
 import React from 'react';
 import TemporaryDrawer from '../TemporaryDrawer';
 import Box from '@mui/material/Box';
-import SkillCard from './SkillCard';
+import SkillCard from './WorkCard';
 
 
 export default function Skill() {

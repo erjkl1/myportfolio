@@ -12,10 +12,9 @@ const About = () => {
     top: '0',
     width:'110px',
     height:'100%',
-   
     color:'#ffffff',
     "&:hover": {
-      backgroundColor:'black',
+      backgroundColor:'#171717',
       cursor: 'default',
     }
   };
@@ -25,7 +24,7 @@ const About = () => {
     <div className='h-screen w-screen'> 
       <TemporaryDrawer 
       sx={drawerButtonStyle}
-      text = 'menu' 
+      
       />
       <div className='flex justify-center py-4 text-6xl'>
         About

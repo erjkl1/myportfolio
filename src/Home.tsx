@@ -22,6 +22,7 @@ const Home = () => {
         <Video />
         <TemporaryDrawer 
         sx={drawerStyle} 
+        text = 'a'
         />
         </div>
   );
