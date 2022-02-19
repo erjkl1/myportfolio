@@ -8,7 +8,7 @@ export default function Video() {
     }, []);
     return (
         <React.StrictMode>         
-                    <video muted loop ref={videoRef} className='absolute z-0 bottom-0 right-0 '>
+                    <video muted loop ref={videoRef} className='absolute z-0 bottom-0 right-0 min-w-full '>
                         <source src={Fire} type="video/mp4" />
                         <p>Your browser doesn't support HTML5 video.</p>
                     </video>

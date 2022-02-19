@@ -2,7 +2,8 @@ import React from 'react';
 import Chuke from './img/chuke.png';
 import TemporaryDrawer from './TemporaryDrawer';
 import Timeline from './Timeline'
-import WidgetsIcon from '@mui/icons-material/Widgets';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import ArticleIcon from '@mui/icons-material/Article';
 
 const About = () => {
   const drawerButtonStyle = {
@@ -35,13 +36,23 @@ const About = () => {
           <div className='flex justify-center'>
               <img src={Chuke} alt="Chuke" className='w-40'/>
           </div>
-          <div className='flex justify-center'>
+          <div className='flex justify-center text-xl my-2'>
               ちゅけ
           </div>
+          <div className='flex justify-center'>
+            <a href="https://twitter.com/Chuke_yamaha">
+              <TwitterIcon sx={{fontSize:50}}/>
+            </a>
+            <a href="https://chuke-blog.com/Chuke_yamaha">
+              <ArticleIcon sx={{fontSize:50}}/>
+            </a>
+          </div>
+
+          
         </div>
 
         <div className = 'w-2/5'>
-          <div className = ''>
+          <div className = 'text-xl'>
             埼玉県生まれ。法政大学　機械工学科卒業。<br/>
             大手自動車メーカーにて完成者の品質保証に携わる。<br/>
             在職中pythonを用いてデータからは読み取れないMT車のギアを推測、<br/>

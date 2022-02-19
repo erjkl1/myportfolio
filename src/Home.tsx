@@ -1,6 +1,7 @@
 import React from 'react';
 import TemporaryDrawer from './TemporaryDrawer';
 import Video from './Video'
+
 const Home = () => {
 
   const drawerStyle = {
@@ -18,7 +19,7 @@ const Home = () => {
 
   return ( 
         <div>
-        <label className='text-white text-left text-4xl z-10 block absolute top-1/4 left-1/4'>Welcome to  Chuke portfolio</label>
+        <label className='text-white text-4xl z-10 block absolute top-1/4 left-1/4'>Welcome to Chuke portfolio</label>
         <Video />
         <TemporaryDrawer 
         sx={drawerStyle} 
