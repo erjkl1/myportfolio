@@ -1,6 +1,6 @@
 # このリポジトリについて
 
-これはちゅけ(twitter:https://twitter.com/chuke_yamaha?s=21&t=oJSBFDPqTopaU-G7TRb5Xw)
+これはちゅけ(twitter:https://twitter.com/chuke_yamaha)
 のポートフォリオです．
 ReactApp を用いて構築されています．
 
