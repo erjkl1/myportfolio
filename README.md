@@ -1,47 +1,28 @@
-# Getting Started with Create React App
+# このリポジトリについて
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+これはちゅけ(twitter:https://twitter.com/chuke_yamaha?s=21&t=oJSBFDPqTopaU-G7TRb5Xw)
+のポートフォリオです．
+ReactApp を用いて構築されています．
 
-## Available Scripts
+## こだわった点
 
-In the project directory, you can run:
+・使用している技術
+・React+Typescript,tailwind3
+・SPA で開発していること
+・ライブラリ・メディアを用いて動的な動きをするサイトを心がけた
+・問い合わせ機能を開発した
 
-### `npm start`
+##　技術選定の理由
+昨今の UI,UX を最大化しつつ効率的に開発することができる
+フロントエンドモダン開発のうちデファクトスタンダードである技術を用いて開発していること
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+自身の経験のある JS に近しい言語を選択して効率よく静的型付け言語を学びたかった
+自身のスキル向上のため難易度よりも，グローバルで活用されているかに着目し選択した
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 環境構築方法
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# myportfolio
+yarn install でパッケージをインストールしたのち npm start で起動可能
+動作確認環境
+OS:M1 Macbook Air Ventura 13.2.1
+shell: zsh
+node:v20.0.0
