@@ -3,15 +3,24 @@
 これはちゅけ(twitter:https://twitter.com/chuke_yamaha)<br>
 のポートフォリオです．<br>
 ReactApp を用いて構築されています．
+githubPagesを用いてビルドされています
 
 ## こだわった点
 
-・使用している技術に React+Typescript,tailwind3 を採用した<br>
+・使用している技術に React+Typescript,tailwind,mui を採用した<br>
 ・SPA で開発していること<br>
 ・ライブラリ・メディアを用いて動的な動きをするサイトを心がけた<br>
 ・問い合わせ機能を開発した
 
+## 使用している技術
+
+react@17.0.2
+typescript@4.9.5
+tailwindcss@npm:@tailwindcss/postcss7-compat@2.2.17
+@mui/material@5.12.1
+
 ##　技術選定の理由
+
 昨今の UI,UX を最大化しつつ効率的に開発することができる<br>
 フロントエンドモダン開発のうちデファクトスタンダードである技術を用いて開発していること<br>
 <br>
