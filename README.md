@@ -2,8 +2,9 @@
 
 これはちゅけ(twitter:https://twitter.com/chuke_yamaha)<br>
 のポートフォリオです．<br>
-ReactApp を用いて構築されています．
-githubPagesを用いてビルドされています
+ReactApp を用いて構築されています．<br>
+githubPagesを用いてビルドされています.<br>
+https://erjkl1.github.io/myportfolio/
 
 ## こだわった点
 
