@@ -1,7 +1,7 @@
 {
   "name": "myportfolio",
   "version": "0.2.0",
-  "homepage": "https://erjkl1.github.io/myportfolio/",
+  "homepage": "https://erjkl1.github.io/myportfolio",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",
