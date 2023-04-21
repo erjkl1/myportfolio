@@ -14,12 +14,12 @@ githubPagesを用いてビルドされています
 
 ## 使用している技術
 
-react@17.0.2
-typescript@4.9.5
-tailwindcss@npm:@tailwindcss/postcss7-compat@2.2.17
+react@17.0.2<br>
+typescript@4.9.5<br>
+tailwindcss@npm:@tailwindcss/postcss7-compat@2.2.17<br>
 @mui/material@5.12.1
 
-##　技術選定の理由
+## 技術選定の理由
 
 昨今の UI,UX を最大化しつつ効率的に開発することができる<br>
 フロントエンドモダン開発のうちデファクトスタンダードである技術を用いて開発していること<br>
