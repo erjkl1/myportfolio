@@ -35,3 +35,32 @@ yarn install でパッケージをインストールしたのち npm start で�
 OS:M1 Macbook Air Ventura 13.2.1<br>
 shell: zsh<br>
 node: v20.0.0
+
+## デプロイ方法
+
+以下のコマンドをプロジェクト直下ディレクトリで実行しビルドする
+```
+npm run build
+```
+
+.gitignoreを以下のように編集し生成されたbuildフォルダをcommitできるようにする
+```
+# production
+# /build
+```
+
+以下のコマンドを実行しコミット，プッシュする
+```
+git commit -am 'Add build folder'
+git push origin main
+```
+
+以下のコマンドを実行しサブツリーにpushする
+```
+git subtree push --prefix build/ origin gh-pages
+```
+
+https://dev-yakuza.posstree.com/react/github-pages/
+デプロイについて参考にさせていただきました
+
+
