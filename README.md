@@ -30,17 +30,18 @@ tailwindcss@npm:@tailwindcss/postcss7-compat@2.2.17<br>
 
 ## 環境構築方法
 
-yarn install でパッケージをインストールしたのち npm start で起動可能<br>
+yarn install でパッケージをインストールしたのち yarn start で起動可能<br>
 動作確認環境<br>
 OS:M1 Macbook Air Ventura 13.2.1<br>
 shell: zsh<br>
 node: v20.0.0
+yarn: 1.22.19
 
 ## デプロイ方法
 
 以下のコマンドをプロジェクト直下ディレクトリで実行しビルドする
 ```
-npm run build
+yarn run build
 ```
 
 .gitignoreを以下のように編集し生成されたbuildフォルダをcommitできるようにする
