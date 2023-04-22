@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import History from "./History";
+// import History from "./History";
 import Skill from "./Skill/Skill";
 import Work from "./Work/Work";
 import Contact from "./Contact/Contact";
