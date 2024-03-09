@@ -2,19 +2,6 @@ import TemporaryDrawer from "../TemporaryDrawer";
 import SkillCard from "./WorkCard";
 
 export default function Skill() {
-  const drawerButtonStyle = {
-    position: "absolute",
-    left: "0",
-    top: "0",
-    width: "110px",
-    height: "100%",
-    color: "#ffffff",
-    "&:hover": {
-      backgroundColor: "#171717",
-      cursor: "default",
-    },
-  };
-
   const cardsInfo: string[][] = [
     [
       "Python",
@@ -66,7 +53,7 @@ export default function Skill() {
   return (
     <div>
       <div className="flex justify-center text-6xl my-10">Skills</div>
-      <TemporaryDrawer sx={drawerButtonStyle} />
+      <TemporaryDrawer />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mx-32">
         {cardsInfo.map((value, index) => (
           <SkillCard

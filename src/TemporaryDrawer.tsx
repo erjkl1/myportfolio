@@ -14,6 +14,19 @@ import HelpIcon from "@mui/icons-material/Help";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
+const sxDefault = {
+  position: "absolute",
+  left: "0",
+  top: "0",
+  width: "110px",
+  height: "100%",
+  color: "#ffffff",
+  "&:hover": {
+    backgroundColor: "#171717",
+    cursor: "default",
+  },
+};
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -31,7 +44,7 @@ type DrawerButton = {
 };
 
 export default function TemporaryDrawer({
-  sx = {},
+  sx = sxDefault,
   text = "",
 }: DrawerButton): JSX.Element {
   const [state, setState] = React.useState({ left: false });
