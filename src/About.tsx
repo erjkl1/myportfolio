@@ -4,6 +4,7 @@ import TemporaryDrawer from "./TemporaryDrawer";
 import Timeline from "./Timeline";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import ArticleIcon from "@mui/icons-material/Article";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const About = () => {
   return (
@@ -17,8 +18,8 @@ const About = () => {
             <div className="flex justify-center">
               <img src={Chuke} alt="Chuke" className="w-36" />
             </div>
-            <div className="flex justify-center text-xl my-2">ちゅけ</div>
-            <div className="flex justify-center">
+            <div className="flex justify-center text-xl my-2">
+              <div className="ml-20 pl-5 pr-5">ちゅけ</div>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,6 +33,13 @@ const About = () => {
                 href="https://chuke-blog.com/"
               >
                 <ArticleIcon sx={{ fontSize: 30 }} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/erjkl1"
+              >
+                <GitHubIcon sx={{ fontSize: 30 }} />
               </a>
             </div>
           </div>
