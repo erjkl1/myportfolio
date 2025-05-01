@@ -62,6 +62,16 @@ export default function Skill() {
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg",
       "https://github.com/erjkl1/ichimon/tree/devFront",
     ],
+    [
+      "Ruby on Rails",
+      "業務でバックエンドのAPIサーバ実装のために使用しています。Rake,Rspecの実装経験もあります。",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain-wordmark.svg",
+    ],
+    [
+      "GithubActions",
+      "業務でCI/CDのために実装・使用しています。Github上でのCI/CDは非常に便利であり、開発の効率化に貢献してくれています。",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
+    ],
   ];
 
   return (
