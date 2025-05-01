@@ -4,7 +4,7 @@
 のポートフォリオです．<br>
 ReactApp を用いて構築されています．<br>
 githubPagesを用いてビルドされています.<br>
-https://erjkl1.github.io/myportfolio/
+https://chukegogo.github.io/myportfolio/
 
 ## こだわった点
 
